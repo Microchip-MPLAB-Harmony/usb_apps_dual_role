@@ -8,7 +8,28 @@ nav_order: 99
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
-## Harmony 3 USB Dual Role application examples v1.0.0
+## Harmony 3 USB Dual Role application examples v3.0.1
+
+### New Features
+
+- None
+
+### Bug fixes
+-   Updated MPLAB® Harmony 3 framework relative path. 
+-   Removed the compiler switch -Winline. 
+
+### Known Issues
+
+- None
+
+### Development Tools
+
+-    [MPLAB® X IDE v5.45](https://www.microchip.com/mplab/mplab-x-ide)
+-    [MPLAB® XC32 C/C++ Compiler v3.00](https://www.microchip.com/mplab/compilers)
+-    [IAR Embedded Workbench® for ARM® v8.5](https://www.iar.com/iar-embedded-workbench/#!?architecture=Arm)
+-   MPLAB® X IDE plug-ins:- MPLAB® Harmony 3 Launcher v3.6.4 or above
+
+## Harmony 3 USB Dual Role application examples v3.0.0
 
 - Applications migrated from USB repository to this new application repository for Dual Role examples
 
