@@ -195,13 +195,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: B8D87B6533E2CE239E9EEB8486DF6996
-- generatedChecksum: 8260C40D99ABA2EE9EAFA93EFC849FBB
+- generatedChecksum: 981EC9483C1B02E5E570B2AE4AA6BE9A
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: usb_device_init_data.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 8260C40D99ABA2EE9EAFA93EFC849FBB
+  userChecksum: 981EC9483C1B02E5E570B2AE4AA6BE9A
 - generatedChecksum: B1BE78DA4858C586B72A7824E2410F13
   logicalPath: config/pic32mz_ef_curiosity_2_0/usb/src
   name: usb_host.c
@@ -881,13 +881,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: A0803FFCE7DA932883C0B89AD48FA04C
-- generatedChecksum: 4B3C3EF8A318908A22B78500515C3288
+- generatedChecksum: null
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: user.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4B3C3EF8A318908A22B78500515C3288
+  userChecksum: null
 - generatedChecksum: 07A482DAB7473FC475EA656561967B15
   logicalPath: config/pic32mz_ef_curiosity_2_0
   name: p32MZ2048EFM144.ld
