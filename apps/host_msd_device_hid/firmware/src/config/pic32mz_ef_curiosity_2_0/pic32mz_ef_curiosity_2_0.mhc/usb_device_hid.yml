@@ -38,4 +38,4 @@ children:
           - type: User
             attributes: {value: Mouse}
 - type: ElementPosition
-  attributes: {x: '320', y: '324', id: usb_device_hid}
+  attributes: {x: '345', y: '294', id: usb_device_hid}
