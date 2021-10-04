@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_dual_role_host_msd_device_hid_pic32mz_ef_sk",
-		"version": "3.1.1",
+		"version": "3.2.0",
 		"displayName": "MSD Host and HID Device Example (host_msd_device_hid) Example for PIC32MZ EF Family",
 		"projectName": "host_msd_device_hid_pic32mz_ef_curiosity_2_0",
 		"shortDescription": "This application creates a USB Dual Role application that can switch between USB Host MSD Stack and USB Device HID function. The role switch is trigger by a switch press. In the USB Host mode, the application performs read and write operations to a USB pen drive. In the USB Device mode, the application emulates a HID mouse.",
@@ -15,7 +15,7 @@
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=3.0.0"
+				"semverRange": ">=3.1.0"
 			}
 		],
 		"dfp": {
@@ -42,10 +42,10 @@
 				"Development Kit", "Curiosity PIC32MZ EF 2.0 Development Board"
 			],
 			[
-				"Harmony", "Middleware", "USB", "HOST_MSD_DEVICE_HID"
+				"Harmony", "Middleware", "USB", "DUAL_ROLE_HOST_MSD_DEVICE_HID"
 			],
 			[
-				"Middleware", "USB", "HOST_MSD_DEVICE_HID"
+				"Middleware", "USB", "DUAL_ROLE_HOST_MSD_DEVICE_HID"
 			]
 		],
 		"peripherals": [
