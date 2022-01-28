@@ -10,12 +10,12 @@
 		"shortDescription": "This application creates a USB Dual Role application that can switch between USB Host MSD Stack and USB Device HID function. The role switch is trigger by a switch press. In the USB Host mode, the application performs read and write operations to a USB pen drive. In the USB Device mode, the application emulates a HID mouse.",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=5.50.0"
+			"semverRange": ">=6.00.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=3.0.0"
+				"semverRange": ">=4.0.0"
 			}
 		],
 		"dfp": {

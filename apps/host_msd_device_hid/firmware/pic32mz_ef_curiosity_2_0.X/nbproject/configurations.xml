@@ -277,6 +277,7 @@
       </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32mz_ef_curiosity_2_0/harmony-manifest-success.yml</itemPath>
+      <itemPath>host_msd_device_hid_pic32mz_ef_curiosity_2_0.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -334,7 +335,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mz_ef_curiosity_2_0;../src/config/pic32mz_ef_curiosity_2_0/system/fs/fat_fs/file_system;../src/config/pic32mz_ef_curiosity_2_0/system/fs/fat_fs/hardware_access;../src/packs/PIC32MZ2048EFM144_DFP"/>
+                  value="../src;../src/config/pic32mz_ef_curiosity_2_0;../src/config/pic32mz_ef_curiosity_2_0/system/fs/fat_fs/file_system;../src/config/pic32mz_ef_curiosity_2_0/system/fs/fat_fs/hardware_access"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -433,7 +434,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mz_ef_curiosity_2_0;../src/config/pic32mz_ef_curiosity_2_0/system/fs/fat_fs/file_system;../src/config/pic32mz_ef_curiosity_2_0/system/fs/fat_fs/hardware_access;../src/packs/PIC32MZ2048EFM144_DFP"/>
+                  value="../src;../src/config/pic32mz_ef_curiosity_2_0;../src/config/pic32mz_ef_curiosity_2_0/system/fs/fat_fs/file_system;../src/config/pic32mz_ef_curiosity_2_0/system/fs/fat_fs/hardware_access"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>

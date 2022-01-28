@@ -4,12 +4,12 @@
 
 
 project: host_msd_device_hid
-creation_date: 2021-06-06T19:35:13.459+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2022-01-28T13:07:04.684+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mhc_mode: IDE            # [IDE|Standalone|Headless]
-mhc_version: v3.8.2
+mhc_version: v3.6.4
 mplabx_version: v6.00        # if MPLAB X plugin only
-plugin_version: v1.0.1        # if MPLAB X plugin only
+plugin_version: v3.6.4        # if MPLAB X plugin only
 compiler: XC32 (4.00)
 
 modules:
