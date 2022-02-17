@@ -171,7 +171,6 @@
         <itemPath>../src/config/pic32mz_ef_sk/pic32mz_ef_sk.mhc/usb_host_msd.yml</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>host_msd_device_hid_pic32mz_ef_sk</itemPath>
       <itemPath>../src/config/pic32mz_ef_sk/harmony-manifest-success.yml</itemPath>
       <itemPath>host_msd_device_hid_pic32mz_ef_sk.mc3</itemPath>
     </logicalFolder>
