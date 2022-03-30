@@ -7,6 +7,34 @@ nav_order: 99
 ![Harmony logo small](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_mplab_harmony_logo_small.png)
 
 # Microchip MPLAB® Harmony 3 Release Notes
+
+## Harmony 3 USB Dual Role application examples v3.3.0
+
+### Development kit and demo application support
+
+The following table provides the number of USB Dual Role examples available for different development kits.
+
+| Development Kits  | MPLAB X Applications | IAR Applications |
+| ----------------- | ------------------- | ---------------- |
+| [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)                      | 1  | 0 |
+| [PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit](https://www.microchip.com/Developmenttools/ProductDetails/DM320007)         | 1  | 0 |
+
+### New Features
+
+- Added MPLAB® Code Configurator (MCC) configurations for all demonstration configurations. 
+
+### Bug fixes
+- None 
+
+### Known Issues
+- None
+
+### Development Tools
+-    [MPLAB® X IDE v6.00](https://www.microchip.com/mplab/mplab-x-ide)
+-    [MPLAB® XC32 C/C++ Compiler v4.00](https://www.microchip.com/mplab/compilers)
+-    [IAR Embedded Workbench® for ARM® v8.5](https://www.iar.com/iar-embedded-workbench/#!?architecture=Arm)
+-   MPLAB® X IDE plug-ins:- MPLAB® Code Configurator (MCC) v5.1.1 or above.
+
 ## Harmony 3 USB Dual Role application examples v3.2.0
 ### Bug fixes
 -   [MPLAB® Discover portal](https://mplab-discover.microchip.com/) metadata for all demonstration application configurations have been updated. 
