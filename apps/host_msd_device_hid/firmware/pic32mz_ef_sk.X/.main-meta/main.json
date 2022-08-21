@@ -2,9 +2,9 @@
 	"metaDataVersion": "1.0.0",
 	"category": "com.microchip.ide.project",
 	"content": {
-		"metaDataVersion": "1.1.0",
+		"metaDataVersion": "1.3.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_dual_role_host_msd_device_hid_pic32mz_ef_sk",
-		"version": "3.3.0",
+		"version": "3.3.1",
 		"displayName": "MSD Host and HID Device Example (host_msd_device_hid) Example for PIC32MZ EF Family",
 		"projectName": "host_msd_device_hid_pic32mz_ef_sk",
 		"shortDescription": "This application creates a USB Dual Role application that can switch between USB Host MSD Stack and USB Device HID function. The role switch is trigger by a switch press. In the USB Host mode, the application performs read and write operations to a USB pen drive. In the USB Device mode, the application emulates a HID mouse.",
@@ -37,28 +37,17 @@
 			}
 		},
 		"author": "Microchip",
-		"subcategories": [
-			[
-				"Development Kit", "PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit"
-			],
-			[
-				"Harmony", "Middleware", "USB", "DUAL_ROLE_HOST_MSD_DEVICE_HID"
-			],
-			[
-				"Middleware", "USB", "DUAL_ROLE_HOST_MSD_DEVICE_HID"
-			]
-		],
 		"peripherals": [
 			"USB"
 		],
 		"keywords": [
-			"MHC",
 			"Harmony",
 			"Middleware",
 			"USB",
-			"PIC32MZ2048EFH144",
-			"PIC32MZ EF Family",
-			"USB"
+			"MSD",
+			"HID",
+			"USB Device Class",
+			"USB Host"
 		],
 		"additionalData": {
 			"longDescription": {
