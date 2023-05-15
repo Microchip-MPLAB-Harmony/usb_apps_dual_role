@@ -1,27 +1,4 @@
 /*******************************************************************************
-* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
-*
-* Subject to your compliance with these terms, you may use Microchip software
-* and any derivatives exclusively with Microchip products. It is your
-* responsibility to comply with third party license terms applicable to your
-* use of third party software (including open source software) that may
-* accompany Microchip software.
-*
-* THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER
-* EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED
-* WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A
-* PARTICULAR PURPOSE.
-*
-* IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE,
-* INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND
-* WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS
-* BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE
-* FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
-* ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
-* THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
-
-/*******************************************************************************
   MPLAB Harmony Application Source File
   
   Company:
@@ -44,6 +21,32 @@
     files.
  *******************************************************************************/
 
+// DOM-IGNORE-BEGIN
+/*******************************************************************************
+Copyright (c) 2013-2014 released Microchip Technology Inc.  All rights reserved.
+
+Microchip licenses to you the right to use, modify, copy and distribute
+Software only when embedded on a Microchip microcontroller or digital signal
+controller that is integrated into your product or third party product
+(pursuant to the sublicense terms in the accompanying license agreement).
+
+You should refer to the license agreement accompanying this Software for
+additional information regarding your rights and obligations.
+
+SOFTWARE AND DOCUMENTATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND,
+EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF
+MERCHANTABILITY, TITLE, NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE.
+IN NO EVENT SHALL MICROCHIP OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER
+CONTRACT, NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR
+OTHER LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE OR
+CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT OF
+SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+(INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+ *******************************************************************************/
+// DOM-IGNORE-END
+
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Included Files 
@@ -51,8 +54,6 @@
 // *****************************************************************************
 
 #include "app.h"
-#include "driver/usb/usbhs/src/drv_usbhs_local.h"
-#include "driver/usb/usbhs/drv_usbhs.h"
 
 
 // *****************************************************************************
@@ -101,7 +102,9 @@ void APP_USBDeviceHIDEventHandler
     uintptr_t userData
 )
 {
+    /* Start of local variables */
     APP_DATA * appDataObject = (APP_DATA *)userData;
+    /* End of local variables */
 
     switch(event)
     {
@@ -115,7 +118,7 @@ void APP_USBDeviceHIDEventHandler
 
         case USB_DEVICE_HID_EVENT_REPORT_RECEIVED:
 
-            /* Don t care for other event in this demo */
+            /* Don't care for other event in this demo */
             break;
 
         case USB_DEVICE_HID_EVENT_SET_IDLE:
@@ -132,12 +135,12 @@ void APP_USBDeviceHIDEventHandler
             /* Host is requesting for Idle rate. Now send the Idle rate */
             USB_DEVICE_ControlSend(appDataObject->deviceHandle, &(appDataObject->idleRate),1);
 
-            /* On successfully receiving Idle rate, the Host would acknowledge back with a
-               Zero Length packet. The HID function driver returns an event
-               USB_DEVICE_HID_EVENT_CONTROL_TRANSFER_DATA_SENT to the application upon
-               receiving this Zero Length packet from Host.
-               USB_DEVICE_HID_EVENT_CONTROL_TRANSFER_DATA_SENT event indicates this control transfer
-               event is complete */
+            /* On successfully receiving Idle rate, the Host would acknowledge
+               back with a Zero Length packet. The HID function driver returns
+               an event USB_DEVICE_HID_EVENT_CONTROL_TRANSFER_DATA_SENT to the
+               application upon receiving this Zero Length packet from Host.
+               USB_DEVICE_HID_EVENT_CONTROL_TRANSFER_DATA_SENT event indicates
+               this control transfer event is complete */
 
             break;
 
@@ -283,6 +286,7 @@ void APP_SYSFSEventHandler(SYS_FS_EVENT event, void * eventData, uintptr_t conte
 }
 
 
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Local Functions
@@ -298,47 +302,9 @@ void APP_ProcessSwitchPress(void)
     /* This function checks if the switch is pressed and then
      * debounces the switch press*/
 
-#ifdef SWITCH1_STATE_PRESSED
-    if(SWITCH1_STATE_PRESSED == (SWITCH1_Get()))
+    if(SWITCH0_STATE_PRESSED == (SWITCH0_Get()))
     {
-        if(appData.ignoreSwitchPress)
-        {
-            /* This means the key press is in progress */
-            if(appData.sofEventHasOccurred)
-            {
-                /* A timer event has occurred. Update the debounce timer */
-                appData.switchDebounceTimer ++;
-                appData.sofEventHasOccurred = false;
-                if(appData.switchDebounceTimer == APP_USB_SWITCH_DEBOUNCE_COUNT)
-                {
-                    /* Indicate that we have valid switch press. The switch is
-                     * pressed flag will be cleared by the application tasks
-                     * routine. We should be ready for the next key press.*/
-                    appData.isSwitchPressed = true;
-                    appData.switchDebounceTimer = 0;
-                    appData.ignoreSwitchPress = false;
-                }
-            }
-        }
-        else
-        {
-            /* We have a fresh key press */
-            appData.ignoreSwitchPress = true;
-            appData.switchDebounceTimer = 0;
-        }
-    }
-    else
-    {
-        /* No key press. Reset all the indicators. */
-        appData.ignoreSwitchPress = false;
-        appData.switchDebounceTimer = 0;
-        appData.sofEventHasOccurred = false;
-    }
-#endif
-
-    if(SWITCH2_STATE_PRESSED == (SWITCH2_Get()))
-    {
-        appData.isSwitch2Pressed = true;
+        appData.isSwitch0Pressed = true;
         if (( appData.currentRole == APP_NONE ) || ( appData.currentRole == APP_HOST ))
         {
             appData.roleSwitch = true;
@@ -346,19 +312,23 @@ void APP_ProcessSwitchPress(void)
             USB_HOST_BusDisable(0);
             appData.state = APP_STATE_SELECT_USB_ROLE;
         }
+        
+        
     }
-
-    if(SWITCH3_STATE_PRESSED == (SWITCH3_Get()))
+    
+    if(SWITCH1_STATE_PRESSED == (SWITCH1_Get()))
     {
-        appData.isSwitch3Pressed = true;
+        appData.isSwitch1Pressed = true;
         if (( appData.currentRole == APP_NONE ) || ( appData.currentRole == APP_DEVICE ))
         {
             appData.roleSwitch = true;
             appData.currentRole = APP_HOST ;
             appData.state = APP_STATE_SELECT_USB_ROLE;
         }
+        
+        
     }
-}
+ }
 
 
 // *****************************************************************************
@@ -391,15 +361,13 @@ void APP_Initialize ( void )
     appData.currentRole = APP_NONE ;
     appData.roleSwitch = false;
     appData.deviceIsConnected = false;
-    appData.isSwitch2Pressed = false;
-    appData.isSwitch3Pressed = false;
+    appData.isSwitch0Pressed = false;
+    appData.isSwitch1Pressed = false;
     appData.powerDetected = false;
     
 }
 
 int8_t dir_table[] ={-4,-4,-4, 0, 4, 4, 4, 0};
-
-
 /******************************************************************************
   Function:
     void APP_Tasks ( void )
@@ -407,12 +375,6 @@ int8_t dir_table[] ={-4,-4,-4, 0, 4, 4, 4, 0};
   Remarks:
     See prototype in app.h.
  */
-extern DRV_USBHS_OBJ gDrvUSBObj[DRV_USBHS_INSTANCES_NUMBER];
-extern uint16_t _DRV_USBHS_DEVICE_FIFOAllocate
-(
-    DRV_USBHS_OBJ * hDriver, 
-    uint16_t endpointSize
-);
 
 void APP_Tasks ( void )
 {
@@ -461,9 +423,8 @@ void APP_Tasks ( void )
             {
                 LED1_Off (  );
                 LED2_Off (  );
-#ifdef LED3_Off
-                LED3_Off (  );
-#endif
+               
+                
                 appData.isConfigured = false;
                 appData.emulateMouse = true;
                 appData.hidInstance = 0;
@@ -475,7 +436,7 @@ void APP_Tasks ( void )
  
                 if(appData.currentRole == APP_HOST  )
                 {
-                    if  ( appData.isSwitch3Pressed == true  )
+                    if  ( appData.isSwitch1Pressed == true  )
                     {
                         appData.state = APP_STATE_WAIT_FOR_BUS_ENABLE_COMPLETE;
                         USB_HOST_BusEnable(0);
@@ -483,142 +444,23 @@ void APP_Tasks ( void )
                         {
                             USB_DEVICE_Detach(appData.deviceHandle);
                         }
+                        
                         appData.currentRole = APP_HOST ;
-
-    DRV_USBHS_OBJ * drvObj = &gDrvUSBObj[0];
-    USBHS_MODULE_ID usbID = USBHS_NUMBER_OF_MODULES;
-
-    usbID = drvObj->usbDrvCommonObj.usbID;
-    /* No device attached */
-    drvObj->usbDrvHostObj.deviceAttached = false;
-
-    /* Initialize the device handle */
-    drvObj->usbDrvHostObj.attachedDeviceObjHandle = USB_HOST_DEVICE_OBJ_HANDLE_INVALID;
-
-    /* IDVAL is the source of ID */
-    ((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_CTRLA |= USBHS_CTRLA_IDOVEN(1); 
-
-    /* ID override value is 0 (A plug) */
-    ((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_CTRLA &= ~USBHS_CTRLA_IDVAL(1);
-
-    /* Enable module */
-    ((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_CTRLA |= USBHS_CTRLA_ENABLE(1);
-
-    /* Software must poll this bit to know when the operation completes. */
-    while ((((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_SYNCBUSY & USBHS_SYNCBUSY_ENABLE_Msk) == USBHS_SYNCBUSY_ENABLE_Msk)
-    {
-    }
-    /* PHY is in on (operational power state) */
-    while ((((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_STATUS & USBHS_STATUS_PHYON_Msk ) == 0)
-    {
-    }
-    /* PHY is ready for USB activity */
-    while ((((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_STATUS & USBHS_STATUS_PHYRDY_Msk) == 0)
-    {
-    }
-    
-    /* PHY24.OTGOFF controls OTG threshold detection.
-     * When OTGOFF=1, OTG VBUS monitoring (vbus valid, A valid, B valid, session end)
-     * is powered off */
-    ((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_PHY24 |= (1<<1);
-
-    /* Based on the speed that we are initializing set up the HS Enable bit in
-     * the Power register */
-
-    if(drvObj->usbDrvCommonObj.operationSpeed == USB_SPEED_HIGH)
-    {
-        /* Enable high speed */
-        PLIB_USBHS_HighSpeedEnable(usbID);
-    }
-    else
-    {
-        /* Enable full speed */
-        PLIB_USBHS_HighSpeedDisable(usbID);
-    }
-
-    /* Initialize the host specific members in the driver object */
-    drvObj->usbDrvHostObj.isResetting = false;
-    drvObj->usbDrvHostObj.usbHostDeviceInfo = USB_HOST_DEVICE_OBJ_HANDLE_INVALID;
-
- //   if(DRV_USBHS_OPMODE_DUAL_ROLE != drvObj->usbDrvCommonObj.operationMode)
-    {
-        /* Disable all interrupts. Interrupts will be enabled when the root hub is
-         * enabled */
-        PLIB_USBHS_InterruptEnableSet(usbID,(USBHS_GEN_INTERRUPT)0x0, (USBHS_EPTXRX_INTERRUPT)0x0, (USBHS_EPTXRX_INTERRUPT)0x0);
-    }
-
-                        appData.isSwitch3Pressed = false;
+                        appData.isSwitch1Pressed = false;
                         appData.roleSwitch = false;
+                        
                     }
                     
                 }
                 if(appData.currentRole == APP_DEVICE  )
                 {
-                    if ( appData.isSwitch2Pressed == true  )
+                    if ( appData.isSwitch0Pressed == true  )
                     {
                         appData.state = APP_STATE_WAIT_FOR_BUS_DISABLE_COMPLETE;
                         USB_HOST_BusDisable(0);
-
-
-    DRV_USBHS_OBJ * drvObj = &gDrvUSBObj[0];
-    USBHS_MODULE_ID usbID = USBHS_NUMBER_OF_MODULES;
-
-    usbID = drvObj->usbDrvCommonObj.usbID;
-
-    /* When configured in dual role mode, we will enable requisite interrupts as
-     * part of device attach. Device detach will disable device specific
-     * interrupts.  */
-
-    /* IDVAL is the source of ID */
-    ((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_CTRLA |= USBHS_CTRLA_IDOVEN(1); 
-
-    /* ID override value is 1 (B plug) */
-    ((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_CTRLA |= USBHS_CTRLA_IDVAL(1);
-
-    /* Enable module */
-    ((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_CTRLA |= USBHS_CTRLA_ENABLE(1);
-
-    /* Software must poll this bit to know when the operation completes. */
-    while ((((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_SYNCBUSY & USBHS_SYNCBUSY_ENABLE_Msk) == USBHS_SYNCBUSY_ENABLE_Msk)
-    {
-    }
-    /* PHY is in on (operational power state) */
-    while ((((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_STATUS & USBHS_STATUS_PHYON_Msk ) == 0)
-    {
-    }
-    /* PHY is ready for USB activity */
-    while ((((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_STATUS & USBHS_STATUS_PHYRDY_Msk) == 0)
-    {
-    }
-    
-    /* PHY24.OTGOFF controls OTG threshold detection.
-     * When OTGOFF=1, OTG VBUS monitoring (vbus valid, A valid, B valid, session end)
-     * is powered off */
-    ((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_PHY24 |= (1<<1);
-
-    
-    /* Allocate 64 bytes of the FIFO for endpoint 0 */
-    _DRV_USBHS_DEVICE_FIFOAllocate(drvObj, 64);
-
-                        appData.isSwitch2Pressed  = false ;
+                        appData.isSwitch0Pressed  = false ;
                         appData.currentRole = APP_DEVICE ;
                         appData.roleSwitch = false;
-
-//    if(DRV_USBHS_OPMODE_DUAL_ROLE != drvObj->usbDrvCommonObj.operationMode)
-    {
-        /* Disable all endpoint interrupts Enable the reset, the SOF, resume and
-         * suspend interrupt */
-        PLIB_USBHS_InterruptEnableSet(usbID, (USBHS_GEN_INTERRUPT)0x7, (USBHS_EPTXRX_INTERRUPT)0x0, (USBHS_EPTXRX_INTERRUPT)0x0);
-        /* Enable USBHS0 DMA Interrupt */
-        ((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_INTENSET = USBHS_INTENSET_DMA_Msk | USBHS_INTENSET_USB_Msk;  
-    }
-//    else
-//    {
-//        /* Disable all interrupts */
-//        PLIB_USBHS_InterruptEnableSet(usbID,(USBHS_GEN_INTERRUPT)0x0, (USBHS_EPTXRX_INTERRUPT)0x0, (USBHS_EPTXRX_INTERRUPT)0x0);
-//    }
-
-
                     }
                 }
             }
@@ -773,9 +615,7 @@ void APP_Tasks ( void )
              * is received.  */
             if(appData.deviceIsConnected)
             {
-#ifdef LED3_On
-                LED3_On(  );
-#endif
+                LED1_On(  );
                 LED2_Off(  );
                 appData.state = APP_STATE_DEVICE_CONNECTED;
             }
@@ -840,9 +680,7 @@ void APP_Tasks ( void )
              * successfully. Provide LED indication. Wait for device detach
              * and if detached, wait for attach. */
 
-#ifdef LED3_Off
-            LED3_Off (  );
-#endif
+            LED1_Off( );
             LED2_On(  );
             if(appData.deviceIsConnected == false)
             {

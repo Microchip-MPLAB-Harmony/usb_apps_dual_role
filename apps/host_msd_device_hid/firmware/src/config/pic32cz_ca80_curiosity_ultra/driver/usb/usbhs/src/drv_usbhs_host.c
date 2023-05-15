@@ -672,12 +672,53 @@ unsigned int _DRV_USBHS_HOST_IRPReceiveFIFOUnload
     return (count);
 }
 
+
+
 void _DRV_USBHS_HOST_Initialize
 (
     DRV_USBHS_OBJ * drvObj, 
     SYS_MODULE_INDEX index
 )
 {
+
+	USBHS_MODULE_ID usbID = drvObj->usbDrvCommonObj.usbID;
+
+        /* Initialize the device handle */
+    drvObj->usbDrvHostObj.attachedDeviceObjHandle = USB_HOST_DEVICE_OBJ_HANDLE_INVALID;
+    /* No device attached */
+    drvObj->usbDrvHostObj.deviceAttached = false;
+
+  
+    
+    /* PHY24.OTGOFF controls OTG threshold detection.
+     * When OTGOFF=1, OTG VBUS monitoring (vbus valid, A valid, B valid, session end)
+     * is powered off */
+   ((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_PHY24 |= (1<<1);
+
+    if(DRV_USBHS_OPMODE_DUAL_ROLE != drvObj->usbDrvCommonObj.operationMode)
+    {
+        /* Disable all interrupts. Interrupts will be enabled when the root hub is
+         * enabled */
+        PLIB_USBHS_InterruptEnableSet(usbID, 0x0, 0x0, 0x0);
+    }
+
+    /* Based on the speed that we are initializing set up the HS Enable bit in
+     * the Power register */
+
+    if(drvObj->usbDrvCommonObj.operationSpeed == USB_SPEED_HIGH)
+    {
+        /* Enable high speed */
+        PLIB_USBHS_HighSpeedEnable(usbID);
+    }
+    else
+    {
+        /* Enable full speed */
+        PLIB_USBHS_HighSpeedDisable(usbID);
+    }
+
+    /* Initialize the host specific members in the driver object */
+    drvObj->usbDrvHostObj.isResetting = false;
+    drvObj->usbDrvHostObj.usbHostDeviceInfo = USB_HOST_DEVICE_OBJ_HANDLE_INVALID;
 }
 
 USB_ERROR DRV_USBHS_HOST_IRPSubmit
@@ -2700,6 +2741,7 @@ void DRV_USBHS_HOST_ROOT_HUB_OperationEnable
                     pUSBDrvObj->usbDrvCommonObj.isHostRoleActive = false;
                     pUSBDrvObj->usbDrvCommonObj.isDeviceRoleActive = true;
                     pUSBDrvObj->usbDrvCommonObj.hostModeClient = NULL;
+                    _DRV_USBHS_CLOCK_CONTROL_SETUP_DEVICE_MODE(usbID);
                 }
             }
         }
@@ -3223,8 +3265,7 @@ USB_SPEED DRV_USBHS_HOST_ROOT_HUB_PortSpeedGet
 /* Function:
     void DRV_USBHS_HOST_EndpointToggleClear
     (
-        DRV_HANDLE client,
-        USB_ENDPOINT endpointAndDirection
+        DRV_USBHS_HOST_PIPE_HANDLE pipeHandle
     )
 
   Summary:
@@ -3244,27 +3285,27 @@ void DRV_USBHS_HOST_EndpointToggleClear
     DRV_USBHS_HOST_PIPE_HANDLE pipeHandle
 )
 {
-    USBHS_MODULE_ID usbID = USBHS_ID_0;
+    USBHS_MODULE_ID usbID = USBHS_NUMBER_OF_MODULES;
     USB_DATA_DIRECTION  direction = USB_DATA_DIRECTION_DEVICE_TO_HOST;
-    DRV_USBHS_HOST_PIPE_OBJ * pPipe = NULL;
+    DRV_USBHS_HOST_PIPE_OBJ * pipe = NULL;
     DRV_USBHS_OBJ * hDriver = NULL;
 
     if ((pipeHandle != DRV_USBHS_HOST_PIPE_HANDLE_INVALID) && ((DRV_USBHS_HOST_PIPE_HANDLE)NULL != pipeHandle))
     {
-        pPipe = (DRV_USBHS_HOST_PIPE_OBJ *)pipeHandle;
-        hDriver = ((DRV_USBHS_CLIENT_OBJ *)(pPipe->hClient))->hDriver;
+        pipe = (DRV_USBHS_HOST_PIPE_OBJ *)pipeHandle;
+        hDriver = ((DRV_USBHS_CLIENT_OBJ *)(pipe->hClient))->hDriver;
         usbID = hDriver->usbDrvCommonObj.usbID;
-        direction = (pPipe->endpointAndDirection & 0x80) >> 7;
+        direction = (pipe->endpointAndDirection & 0x80) >> 7;
         
         if(USB_DATA_DIRECTION_HOST_TO_DEVICE == direction)
         {
             /* Clear the Data Toggle for TX Endpoint */
-            PLIB_USBHS_HostTxEndpointDataToggleClear(usbID, pPipe->hostEndpoint);
+            PLIB_USBHS_HostTxEndpointDataToggleClear(usbID, pipe->hostEndpoint);
         }
         else
         {
             /* Clear the Data Toggle for RX Endpoint */
-            PLIB_USBHS_HostRxEndpointDataToggleClear(usbID, pPipe->hostEndpoint);
+            PLIB_USBHS_HostRxEndpointDataToggleClear(usbID, pipe->hostEndpoint);
         }
     }
     else

@@ -171,10 +171,10 @@ typedef struct
     bool isSwitchPressed;
     
     /* Tracks switch2 press*/
-    bool isSwitch2Pressed;
+    bool isSwitch0Pressed;
     
     /* Tracks switch press*/
-    bool isSwitch3Pressed;
+    bool isSwitch1Pressed;
 
     /* Mouse x coordinate*/
     MOUSE_COORDINATE xCoordinate;

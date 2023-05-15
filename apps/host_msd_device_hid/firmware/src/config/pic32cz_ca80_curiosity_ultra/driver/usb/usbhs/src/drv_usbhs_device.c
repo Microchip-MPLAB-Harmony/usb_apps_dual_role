@@ -478,8 +478,38 @@ void _DRV_USBHS_DEVICE_Initialize
     SYS_MODULE_INDEX index
 )
 {
+    USBHS_MODULE_ID usbID = USBHS_NUMBER_OF_MODULES;
+
+    usbID = drvObj->usbDrvCommonObj.usbID;
+
+    /* When configured in dual role mode, we will enable requisite interrupts as
+     * part of device attach. Device detach will disable device specific
+     * interrupts.  */
+
+    if(DRV_USBHS_OPMODE_DUAL_ROLE != drvObj->usbDrvCommonObj.operationMode)
+    {
+        /* Disable all endpoint interrupts Enable the reset, the SOF, resume and
+         * suspend interrupt */
+        PLIB_USBHS_InterruptEnableSet(usbID, (USBHS_GEN_INTERRUPT)0x7, (USBHS_EPTXRX_INTERRUPT)0x0, (USBHS_EPTXRX_INTERRUPT)0x0);
+        /* Enable USBHS0 DMA Interrupt */
+        ((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_INTENSET = USBHS_INTENSET_DMA_Msk | USBHS_INTENSET_USB_Msk;  
+    }
+    else
+    {
+        /* Disable all interrupts */
+        PLIB_USBHS_InterruptEnableSet(usbID,(USBHS_GEN_INTERRUPT)0x0, (USBHS_EPTXRX_INTERRUPT)0x0, (USBHS_EPTXRX_INTERRUPT)0x0);
+    }
+    _DRV_USBHS_CLOCK_CONTROL_SETUP_DEVICE_MODE(usbID );  
 
     
+    /* PHY24.OTGOFF controls OTG threshold detection.
+     * When OTGOFF=1, OTG VBUS monitoring (vbus valid, A valid, B valid, session end)
+     * is powered off */
+    ((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_PHY24 |= (1<<1);
+
+    
+    /* Allocate 64 bytes of the FIFO for endpoint 0 */
+    _DRV_USBHS_DEVICE_FIFOAllocate(drvObj, 64);
 }
 
 // *****************************************************************************
@@ -660,6 +690,7 @@ void DRV_USBHS_DEVICE_RemoteWakeupStop
     }
 }
 
+
 // *****************************************************************************
 /* Function:
     void DRV_USBHS_DEVICE_Attach(DRV_HANDLE handle);
@@ -744,6 +775,7 @@ void _DRV_USBHS_DEVICE_AttachStateMachine
               (DRV_USBHS_OPMODE_DEVICE == hDriver->usbDrvCommonObj.operationMode))   
         {
             PLIB_USBHS_InterruptEnableSet(hDriver->usbDrvCommonObj.usbID, (USBHS_GEN_INTERRUPT)0xF, (USBHS_EPTXRX_INTERRUPT)0x0, (USBHS_EPTXRX_INTERRUPT)0x0);
+            ((usbhs_registers_t*)usbID)->ENDPOINT0.USBHS_INTENSET = USBHS_INTENSET_DMA_Msk | USBHS_INTENSET_USB_Msk;
         }
         
         _DRV_USBHS_PersistentInterruptSourceClear(hDriver->usbDrvCommonObj.interruptSource);

@@ -41,7 +41,7 @@
 
 const USB_HOST_TPL_ENTRY USBTPList[1] = 
 {
-	TPL_INTERFACE_CLASS_SUBCLASS_PROTOCOL(0x08, 0x06, 0x50, NULL,  USB_HOST_MSD_INTERFACE) ,
+    TPL_INTERFACE_CLASS_SUBCLASS_PROTOCOL(0x08, 0x06, 0x50, NULL,  USB_HOST_MSD_INTERFACE) ,
 
 
 };
@@ -49,11 +49,11 @@ const USB_HOST_TPL_ENTRY USBTPList[1] =
 const USB_HOST_HCD hcdTable[1] = 
 {
     {
-    /* Index of the USB Driver used by the Host Layer */
-    .drvIndex = DRV_USBHS_INDEX_0,
+        /* Index of the USB Driver used by the Host Layer */
+        .drvIndex = DRV_USBHS_INDEX_0,
 
-    /* Pointer to the USB Driver Functions. */
-    .hcdInterface = DRV_USBHS_HOST_INTERFACE,
+        /* Pointer to the USB Driver Functions. */
+        .hcdInterface = DRV_USBHS_HOST_INTERFACE,
     },
 
 

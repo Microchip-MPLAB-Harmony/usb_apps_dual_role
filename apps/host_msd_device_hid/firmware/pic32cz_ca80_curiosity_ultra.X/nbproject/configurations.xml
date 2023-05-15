@@ -16,40 +16,40 @@
               <logicalFolder name="usbhs" displayName="usbhs" projectFiles="true">
                 <logicalFolder name="src" displayName="src" projectFiles="true">
                   <logicalFolder name="templates" displayName="templates" projectFiles="true">
-                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_EndpointFIFO_Default.h</itemPath>
-                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_USBIDControl_Default.h</itemPath>
-                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_EndpointOperations_Unsupported.h</itemPath>
-                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_ClockResetControl_Default.h</itemPath>
-                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_TxEPStatus_Default.h</itemPath>
-                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_ClockResetControl_Unsupported.h</itemPath>
-                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_TxEPStatus_Unsupported.h</itemPath>
-                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_ModuleControl_Unsupported.h</itemPath>
-                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_EndpointFIFO_Unsupported.h</itemPath>
-                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_HighSpeedSupport_Default.h</itemPath>
-                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_RxEPStatus_Unsupported.h</itemPath>
-                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_RxEPStatus_Default.h</itemPath>
-                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_USBIDControl_Unsupported.h</itemPath>
-                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_EP0Status_Default.h</itemPath>
-                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_Interrupts_Unsupported.h</itemPath>
                     <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_HighSpeedSupport_Unsupported.h</itemPath>
-                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_SoftReset_Default.h</itemPath>
-                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_SoftReset_Unsupported.h</itemPath>
-                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_Interrupts_Default.h</itemPath>
-                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_EndpointOperations_Default.h</itemPath>
-                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_ModuleControl_Default.h</itemPath>
+                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_EP0Status_Default.h</itemPath>
+                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_USBIDControl_Unsupported.h</itemPath>
                     <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_EP0Status_Unsupported.h</itemPath>
+                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_SoftReset_Unsupported.h</itemPath>
+                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_ModuleControl_Unsupported.h</itemPath>
+                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_EndpointFIFO_Default.h</itemPath>
+                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_ClockResetControl_Default.h</itemPath>
+                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_EndpointOperations_Unsupported.h</itemPath>
+                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_EndpointFIFO_Unsupported.h</itemPath>
+                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_ClockResetControl_Unsupported.h</itemPath>
+                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_Interrupts_Default.h</itemPath>
                     <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_registers.h</itemPath>
+                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_RxEPStatus_Unsupported.h</itemPath>
+                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_TxEPStatus_Unsupported.h</itemPath>
+                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_TxEPStatus_Default.h</itemPath>
+                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_RxEPStatus_Default.h</itemPath>
+                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_HighSpeedSupport_Default.h</itemPath>
+                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_ModuleControl_Default.h</itemPath>
+                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_Interrupts_Unsupported.h</itemPath>
+                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_EndpointOperations_Default.h</itemPath>
+                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_SoftReset_Default.h</itemPath>
+                    <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/templates/usbhs_USBIDControl_Default.h</itemPath>
                   </logicalFolder>
-                  <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/plib_usbhs_header.h</itemPath>
                   <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/drv_usbhs_variant_mapping.h</itemPath>
-                  <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/usbhs_registers.h</itemPath>
-                  <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/plib_usbhs.h</itemPath>
                   <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/drv_usbhs_local.h</itemPath>
+                  <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/usbhs_registers.h</itemPath>
+                  <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/plib_usbhs_header.h</itemPath>
+                  <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/plib_usbhs.h</itemPath>
                 </logicalFolder>
                 <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/drv_usbhs.h</itemPath>
               </logicalFolder>
-              <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/drv_usb.h</itemPath>
               <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/drv_usb_external_dependencies.h</itemPath>
+              <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/drv_usb.h</itemPath>
             </logicalFolder>
             <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/driver.h</itemPath>
             <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/driver_common.h</itemPath>
@@ -128,10 +128,8 @@
               <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/usb/src/usb_host_local.h</itemPath>
             </logicalFolder>
             <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/usb/usb_device_hid.h</itemPath>
-            <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/usb/usb_host_hub_interface.h</itemPath>
             <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/usb/usb_hid.h</itemPath>
             <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/usb/usb_host_msd.h</itemPath>
-            <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/usb/usb_host_client_driver.h</itemPath>
             <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/usb/usb_chapter_9.h</itemPath>
             <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/usb/usb_msd.h</itemPath>
             <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/usb/usb_common.h</itemPath>
@@ -140,6 +138,8 @@
             <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/usb/scsi.h</itemPath>
             <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/usb/usb_device.h</itemPath>
             <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/usb/usb_hub.h</itemPath>
+            <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/usb/usb_host_client_driver.h</itemPath>
+            <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/usb/usb_host_hub_interface.h</itemPath>
           </logicalFolder>
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/device_cache.h</itemPath>
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/device_vectors.h</itemPath>
@@ -149,6 +149,7 @@
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/configuration.h</itemPath>
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/interrupts.h</itemPath>
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/definitions.h</itemPath>
+          <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
@@ -312,8 +313,8 @@
               <logicalFolder name="usbhs" displayName="usbhs" projectFiles="true">
                 <logicalFolder name="src" displayName="src" projectFiles="true">
                   <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/drv_usbhs.c</itemPath>
-                  <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/drv_usbhs_device.c</itemPath>
                   <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/drv_usbhs_host.c</itemPath>
+                  <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/driver/usb/usbhs/src/drv_usbhs_device.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
             </logicalFolder>
@@ -414,8 +415,8 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
+        <pack name="PIC32CZ-CA80_DFP" vendor="Microchip" version="1.2.150"/>
         <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
-        <pack name="PIC32CZ-CA80_DFP" vendor="Microchip" version="1.0.17"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -447,8 +448,6 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
-        <property key="appendMe"
-                  value="-Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wredundant-decls -Wnested-externs -Wlong-long -Wunreachable-code -Wmissing-noreturn "/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
@@ -506,7 +505,6 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -546,7 +544,6 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -575,7 +572,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="appendMe" value=""/>
         <property key="common-include-directories" value=""/>
         <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
@@ -604,6 +600,7 @@
         <property key="debugoptions.simultaneous.debug" value="false"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
         <property key="event.recorder.enabled" value="false"/>
+        <property key="event.recorder.scvd.files" value=""/>
         <property key="freeze.timers" value="false"/>
         <property key="lastid" value=""/>
         <property key="memories.aux" value="false"/>
@@ -659,6 +656,7 @@
         <property key="debugoptions.simultaneous.debug" value="false"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
         <property key="event.recorder.enabled" value="false"/>
+        <property key="event.recorder.scvd.files" value=""/>
         <property key="freeze.timers" value="false"/>
         <property key="lastid" value=""/>
         <property key="memories.aux" value="false"/>

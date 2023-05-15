@@ -87,6 +87,12 @@ extern "C" {
 #endif
 // DOM-IGNORE-END
 
+/* Device Information */
+#define DEVICE_NAME			 "PIC32CZ8110CA80208"
+#define DEVICE_ARCH			 "CORTEX-M7"
+#define DEVICE_FAMILY		 "PIC32C"
+#define DEVICE_SERIES		 "PIC32CZCA80"
+
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 300000000
 
@@ -203,7 +209,7 @@ typedef struct
     SYS_MODULE_OBJ  usbDevObject0;
 
     SYS_MODULE_OBJ  sysTime;
-	SYS_MODULE_OBJ  usbHostObject0;
+    SYS_MODULE_OBJ  usbHostObject0;
 
 
     SYS_MODULE_OBJ  drvUSBHSObject0;
