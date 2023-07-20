@@ -51,8 +51,8 @@ The following table gives the details of project configurations, target device u
 ### <a name="config_15"></a> [Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)
 
 - Initially, the application will not operate in any role. Press the corresponding switch to change the operating role.
-    - Press SW2 to change to USB Device mode.
-    - Press SW3 to change to USB Host mode
+    - Press SW1 to change to USB Device mode.
+    - Press SW2 to change to USB Host mode
 - Device mode operation
     - Use the USB micro-B port J201 to connect the USB device to the USB Host PC.
     - LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
@@ -65,8 +65,8 @@ The following table gives the details of project configurations, target device u
 ### <a name="config_16"></a> [PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit](https://www.microchip.com/Developmenttools/ProductDetails/DM320007)
 
 - Initially, the application will not operate in any role. Press the corresponding switch to change the operating role.
-    - Press SW2 to change to USB Device mode.
-    - Press SW3 to change to USB Host mode
+    - Press SW1 to change to USB Device mode.
+    - Press SW2 to change to USB Host mode
 - Device mode operation
     - Use the micro-A/B port J6 (which is located on the bottom side of the board) to connect the USB device to the USB Host PC.
     - LED1 indicates USB Device Configuration Set Complete event (the USB device functionality has been activated by the USB Host).
@@ -83,7 +83,8 @@ Prior to using this demonstration, it is recommended to review the MPLAB Harmony
 
 1. Open the project and in MPLAB X IDE.
 2. Build the code and program the device. The application initially will not operate in any USB role.
-3. Press SW2 on the starter kit. This places the application in a USB Device mode.
+3. Press SW0 for PIC32CZ CA80 SW1 for  PIC32MZ on the starter kit. This places the application in a USB Device mode.
+3. Press SW1 for PIC32CZ CA80 SW2 for  PIC32MZ on the starter kit. This places the application in a USB Host mode.
 4. Connect a USB cable between the micro-B USB connector on the starter kit and a PC USB host. The application will emulate a USB HID mouse function. The cursor on the PC will rotate. Pressing SW1 will enable and disable the cursor movements. Exercise device plug-n-play operation to confirm USB Device operation.
 5. Now try switching the USB role to Host mode. Disconnect the USB cable between the micro USB connector on the starter kit and a PC USB host. Press SW3 on the starter kit.
 6. The application now will be in the USB Host role. Connect a USB pen drive to the USB Host connector on the board. The application will create a file (file.txt) on the pen drive. The completion of the operation is indicated by LED2 on the starter kit. Disconnect the pen drive and connect it to a PC to verify the contents of the file.
