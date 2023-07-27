@@ -59,10 +59,10 @@
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
 #include "system/time/sys_time.h"
-#include "peripheral/coretimer/plib_coretimer.h"
-#include "driver/usb/usbhs/drv_usbhs.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_host.h"
+#include "peripheral/coretimer/plib_coretimer.h"
+#include "driver/usb/usbhs/drv_usbhs.h"
 #include "usb/usb_device_hid.h"
 #include "usb/usb_hid.h"
 #include "system/fs/sys_fs.h"
@@ -209,9 +209,9 @@ typedef struct
     SYS_MODULE_OBJ  usbDevObject0;
 
     SYS_MODULE_OBJ  sysTime;
-	SYS_MODULE_OBJ  drvUSBHSObject;
-
     SYS_MODULE_OBJ  usbHostObject0;
+
+	SYS_MODULE_OBJ  drvUSBHSObject;
 
 
 } SYSTEM_OBJECTS;

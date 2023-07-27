@@ -55,7 +55,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.2"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -3885,7 +3885,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\configuration.h</file>
-         <hash>1253e532fb312be516a28defe9cf0f40a9bc57fff8e1c2c683df47e3701e32d8</hash>
+         <hash>ee10f45f5b407691f08c431168ee306cfcf5968fb63bf139ae6fc438522d7ff7</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\driver\usb\usbhs\src\templates\usbhs_SoftReset_Default.h</file>
@@ -3965,7 +3965,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\usb\src\usb_device_local.h</file>
-         <hash>7ef3cbc9e2060d1d2800fb7a5d6d5597bb008b3da58bf475fc09219dd40c2244</hash>
+         <hash>3dc9e27b535edb31aa97aae04a0ce9ac12e5092ed3bae7ef6fd203bc1520ef33</hash>
       </entry>
       <entry>
          <file>..\src\app.h</file>
@@ -4001,7 +4001,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\tasks.c</file>
-         <hash>aa1eeb8c30b4d11ffaa1c8218a23b7acc558ef9c5384935483ebbd1e1253ea08</hash>
+         <hash>acef180ca8880d3a3b48a103cb7043deec3a55f00f3a2c5a33dc7c3c2dc9dcf0</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\driver\usb\usbhs\src\templates\usbhs_ClockResetControl_Default.h</file>
@@ -4017,7 +4017,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\definitions.h</file>
-         <hash>07f4bc2910f664b3e11b7cf4512f944c5e29afe4bf706409b8f6e749271fcb3c</hash>
+         <hash>8e7fda33bdd75ee912a4a74387b36c4b2f89a1af26e7c4ad7c059954587ce874</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\peripheral\cache\plib_cache.h</file>
@@ -4181,7 +4181,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\initialization.c</file>
-         <hash>e2ba41e6389e5524258ade60880acba7fa22beb281b952615f37fb76667bf0e4</hash>
+         <hash>250cc3f7b4bb385f14e05dbafc92a12c51e664273aef8131dbdd1d8cc44bd30d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\driver\usb\usbhs\src\templates\usbhs_ModuleControl_Default.h</file>
@@ -4308,12 +4308,12 @@
          <hash>91d5a1a9920a5aea939f16fe36e9346b60ba3a8577817f24c0e8198cba2e089d</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mz_ef_sk\driver\usb\usbhs\src\templates\usbhs_registers.h</file>
-         <hash>dca21eb5e97077812a59dd32044166135e5ff40152c9532b77ea7227ba31d988</hash>
-      </entry>
-      <entry>
          <file>..\src\config\pic32mz_ef_sk\usb_host_init_data.c</file>
          <hash>e34b7b9d6d87436b54c8ca66932e017987ed5bea37c725cda4b91ea9dc5452a5</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mz_ef_sk\driver\usb\usbhs\src\templates\usbhs_registers.h</file>
+         <hash>dca21eb5e97077812a59dd32044166135e5ff40152c9532b77ea7227ba31d988</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\driver\usb\usbhs\src\drv_usbhs.c</file>
