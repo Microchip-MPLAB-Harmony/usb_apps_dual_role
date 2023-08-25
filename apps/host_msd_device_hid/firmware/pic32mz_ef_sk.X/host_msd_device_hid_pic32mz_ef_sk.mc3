@@ -3491,6 +3491,33 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_FAT_EXFAT_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
+  &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_FAT_EXFAT_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sys_fs&gt;
+&lt;/sys_fs&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_LFN_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
+  &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_LFN_ENABLE&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;readOnly&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sys_fs&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sys_fs&gt;
+&lt;/sys_fs&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_fs" name="SYS_FS_MEDIA_DEVICE_1_NAME_IDX0"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_fs&gt;
   &lt;sys_fs dnOrder=&quot;0&quot; id=&quot;SYS_FS_MEDIA_DEVICE_1_NAME_IDX0&quot;&gt;
@@ -3881,11 +3908,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\system\fs\sys_fs.h</file>
-         <hash>4ca0bf61b93d1b4335bad8755bfeeed6dfda8a7eb3f2eabfcd9239a0b78e01af</hash>
+         <hash>5161c95024f6736400bcfd7d534651c867cd447549fa73d9d9be7044c576bbcd</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\configuration.h</file>
-         <hash>ee10f45f5b407691f08c431168ee306cfcf5968fb63bf139ae6fc438522d7ff7</hash>
+         <hash>1253e532fb312be516a28defe9cf0f40a9bc57fff8e1c2c683df47e3701e32d8</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\driver\usb\usbhs\src\templates\usbhs_SoftReset_Default.h</file>
@@ -4001,7 +4028,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\tasks.c</file>
-         <hash>acef180ca8880d3a3b48a103cb7043deec3a55f00f3a2c5a33dc7c3c2dc9dcf0</hash>
+         <hash>aa1eeb8c30b4d11ffaa1c8218a23b7acc558ef9c5384935483ebbd1e1253ea08</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\driver\usb\usbhs\src\templates\usbhs_ClockResetControl_Default.h</file>
@@ -4017,7 +4044,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\definitions.h</file>
-         <hash>8e7fda33bdd75ee912a4a74387b36c4b2f89a1af26e7c4ad7c059954587ce874</hash>
+         <hash>3f64098ca56cef8c8d459e7b60fe03c959c7264dbee72b2a529665c07c23b454</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\peripheral\cache\plib_cache.h</file>
@@ -4181,7 +4208,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\initialization.c</file>
-         <hash>250cc3f7b4bb385f14e05dbafc92a12c51e664273aef8131dbdd1d8cc44bd30d</hash>
+         <hash>e2ba41e6389e5524258ade60880acba7fa22beb281b952615f37fb76667bf0e4</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\driver\usb\usbhs\src\templates\usbhs_ModuleControl_Default.h</file>
@@ -4241,7 +4268,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\system\fs\fat_fs\file_system\ffconf.h</file>
-         <hash>eb42d88a772858dbd895386063ff6fa76df37a06bf8ee6da1bf3a43a8d9584e4</hash>
+         <hash>a2dc75b0fcbc740c3c9d99afe0d0f72b7161643bf50e2af2feaddd5913a7b6a3</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\peripheral\cache\plib_cache_pic32mz.S</file>
@@ -4308,12 +4335,12 @@
          <hash>91d5a1a9920a5aea939f16fe36e9346b60ba3a8577817f24c0e8198cba2e089d</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mz_ef_sk\usb_host_init_data.c</file>
-         <hash>e34b7b9d6d87436b54c8ca66932e017987ed5bea37c725cda4b91ea9dc5452a5</hash>
-      </entry>
-      <entry>
          <file>..\src\config\pic32mz_ef_sk\driver\usb\usbhs\src\templates\usbhs_registers.h</file>
          <hash>dca21eb5e97077812a59dd32044166135e5ff40152c9532b77ea7227ba31d988</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mz_ef_sk\usb_host_init_data.c</file>
+         <hash>e34b7b9d6d87436b54c8ca66932e017987ed5bea37c725cda4b91ea9dc5452a5</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\driver\usb\usbhs\src\drv_usbhs.c</file>

@@ -28,14 +28,11 @@ The following table gives the details of project configurations, target device u
 | ------------------------------- | ------ | ------------------- | -------------------------------------------------------------------------- |
 | pic32mz_ef_curiosity_2.X        | MPLABX | PIC32MZ2048EFM144   | [Curiosity PIC32MZ EF 2.0 Development Board](#config_15)                   |
 | pic32mz_ef_sk.X                 | MPLABX | PIC32MZ2048EFH144   | [PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit](#config_16)      |
-| pic32cz_ca80_curiosity_ultra.X  | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ Curiosity Development Board](#config_23)           |
+| pic32cz_ca80_curiosity_ultra.X  | MPLABX | PIC32CZ8110CA80208  | [PIC32CZ CA80 Curiosity Ultra development board](#config_23)           |
 
 ## <a name="config_title"></a> Configuring the Hardware
 
-### <a name="config_23"></a> PIC32CZ CA80 Curiosity Development Board
-- Connect the USB device to the connector (J102) using a USB Type-A Female to micro-B male cable  (This cable is not included in the kit). 
-- LED0 on the board is controlled by the attached USB CDC device.
-
+### <a name="config_23"></a> [PIC32CZ CA80 Curiosity Ultra development board](https://www.microchip.com/en-us/development-tool/ea61x20a)
 - Initially, the application will not operate in any role. Press the corresponding switch to change the operating role.
     - Press SW0 to change to USB Device mode.
     - Press SW1 to change to USB Host mode
