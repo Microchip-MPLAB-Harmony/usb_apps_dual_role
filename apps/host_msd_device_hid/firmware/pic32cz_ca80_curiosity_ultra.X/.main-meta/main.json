@@ -4,27 +4,27 @@
 	"content": {
 		"metaDataVersion": "1.3.0",
 		"name": "com.microchip.mcu32.mplabx.project.usb_apps_dual_role_host_msd_device_hid_pic32cz_ca80_curiosity_ultra",
-		"version": "3.4.0-E1",
+		"version": "3.4.0",
 		"displayName": "MSD Host and HID Device Example (host_msd_device_hid) Example for PIC32CZ_CA  Family",
 		"projectName": "host_msd_device_hidpic32cz_ca80_curiosity_ultra",
 		"shortDescription": "This application creates a USB Dual Role application that can switch between USB Host MSD Stack and USB Device HID function. The role switch is trigger by a switch press. In the USB Host mode, the application performs read and write operations to a USB pen drive. In the USB Device mode, the application emulates a HID mouse.",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=6.05.0"
+			"semverRange": ">=6.15.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=4.2.0"
+				"semverRange": ">=4.3.0"
 			}
 		],
 		"dfp": {
 			"name": "PIC32CZ-CA80_DFP",
-			"semverRange": "^1.0.17"
+			"semverRange": "^1.2.150"
 		},
 		"configurator": {
 			"name": "MCC",
-			"semverRange": ">=5.2.2"
+			"semverRange": ">=5.3.7"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",
