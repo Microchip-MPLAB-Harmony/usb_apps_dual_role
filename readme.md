@@ -37,7 +37,7 @@ The following applications are provided to demonstrate the typical or interestin
 
 | Name                      | Description            |
 | ------------------------- | ---------------------- |
-| MSD Host and HID Device   | This application creates a USB Dual Role application that can switch between USB Host MSD Stack and USB Device HID function. The role switch is trigger by a switch press. In the USB Host mode, the application performs read and write operations to a USB pen drive. In the USB Device mode, the application emulates a HID mouse. |
+| [MSD Host and HID Device](apps/host_msd_device_hid/readme.md)   | This application creates a USB Dual Role application that can switch between USB Host MSD Stack and USB Device HID function. The role switch is trigger by a switch press. In the USB Host mode, the application performs read and write operations to a USB pen drive. In the USB Device mode, the application emulates a HID mouse. |
 
 ____
 
