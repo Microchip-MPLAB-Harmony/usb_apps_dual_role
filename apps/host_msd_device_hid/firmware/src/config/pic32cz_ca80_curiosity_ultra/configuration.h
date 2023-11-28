@@ -141,10 +141,10 @@ extern "C" {
 #define USB_HOST_MSD_LUN_NUMBERS              1
 
 
-#define USB_DEVICE_INSTANCES_NUMBER                         1
+#define USB_DEVICE_INSTANCES_NUMBER                         1U
 
 /* EP0 size in bytes */
-#define USB_DEVICE_EP0_BUFFER_SIZE                          64
+#define USB_DEVICE_EP0_BUFFER_SIZE                          64U
 
 /* The USB Device Layer will not initialize the USB Driver */
 #define USB_DEVICE_DRIVER_INITIALIZE_EXPLICIT
@@ -154,7 +154,7 @@ extern "C" {
 
 
 /* Number High Speed USB Driver instances */ 
-#define DRV_USBHS_INSTANCES_NUMBER                       1
+#define DRV_USBHS_INSTANCES_NUMBER                       1U
 
 /* Interrupt mode enabled */
 #define DRV_USBHS_INTERRUPT_MODE                          true
@@ -162,7 +162,7 @@ extern "C" {
 /* Enables Device Support */
 #define DRV_USBHS_DEVICE_SUPPORT                          true
 
-#define DRV_USBHS_ENDPOINTS_NUMBER                        2
+#define DRV_USBHS_ENDPOINTS_NUMBER                        2U
 
 /* Enable Host Support */
 #define DRV_USBHS_HOST_SUPPORT                            true
