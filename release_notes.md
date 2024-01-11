@@ -26,7 +26,7 @@ Following table provides number of peripheral library examples available for<br 
 
 **Known Issues**
 
--   None
+-   After a power cycle, the reset button on the PIC32CZ CA80 Curiosity Ultra board must be pressed to get the program running.
 
 **Development Tools**
 
