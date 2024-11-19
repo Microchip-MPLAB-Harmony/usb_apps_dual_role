@@ -1,1 +1,0 @@
-define({"topics":[{"title":"<ph>1.1<\/ph>\nMSD Host and HID Device Example (host_msd_device_hid)","href":"GUID-E80614F1-3AB2-4B1C-8D39-5B881F67CE36.html","attributes":{"data-id":"GUID-E80614F1-3AB2-4B1C-8D39-5B881F67CE36"},"menu":{"hasChildren":false},"tocID":"GUID-E80614F1-3AB2-4B1C-8D39-5B881F67CE36-d217e19","topics":[]}]});
