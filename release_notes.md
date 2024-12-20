@@ -2,6 +2,33 @@
 ![Harmony logo small](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_mplab_harmony_logo_small.png)
 
 # Microchip MPLAB® Harmony 3 Release Notes
+## Harmony 3 USB Dual-Role application examples v3.7.0
+
+### Development kit and demo application support
+
+Following table provides number of peripheral library examples available for different development kits.
+
+|Development Kits|MPLAB X applications|
+|----------------|--------------------|
+|[PIC32CZ CA80 Curiosity Ultra development board](https://www.microchip.com/en-us/development-tool/ea61x20a)|1|
+|[Curiosity PIC32MZ EF 2.0 Development Board](https://www.microchip.com/Developmenttools/ProductDetails/DM320209)|1|
+|[PIC32MZ Embedded Connectivity with FPU \(EF\) Starter Kit](https://www.microchip.com/Developmenttools/ProductDetails/DM320007)|1|
+
+**New Features**
+
+-   Regenerated all the demo configurations with the latest Harmony Core and USB repositories.
+
+
+**Known Issues**
+
+-   After a power cycle, the reset button on the PIC32CZ CA80 Curiosity Ultra board must be pressed to get the program running.
+
+**Development Tools**
+
+-   [MPLAB® X IDE v6.20](https://www.microchip.com/mplab/mplab-x-ide)
+-   MPLAB® X IDE plug-ins:
+    -   MPLAB® Code Configurator \(MCC\) v5.5.1
+-   [MPLAB® XC32 C/C++ Compiler v4.45](https://www.microchip.com/mplab/compilers)
 ## Harmony 3 USB Dual-Role application examples v3.6.0 (June, 2024)
 
 ### Development kit and demo application support
