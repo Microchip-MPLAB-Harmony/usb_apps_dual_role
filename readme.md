@@ -34,9 +34,7 @@ To view the documentation offline, follow these steps:
  
 ____
 
-[![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/usb_apps_dual_role/blob/master/mplab_harmony_license.md)
-[![Latest release](https://img.shields.io/github/release/Microchip-MPLAB-Harmony/usb_apps_dual_role.svg)](https://github.com/Microchip-MPLAB-Harmony/usb_apps_dual_role/releases/latest)
-[![Latest release date](https://img.shields.io/github/release-date/Microchip-MPLAB-Harmony/usb_apps_dual_role.svg)](https://github.com/Microchip-MPLAB-Harmony/usb_apps_dual_role/releases/latest)
+[![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/usb_apps_dual_role/blob/master/Microchip_SLA001.md)
 [![Commit activity](https://img.shields.io/github/commit-activity/y/Microchip-MPLAB-Harmony/usb_apps_dual_role.svg)](https://github.com/Microchip-MPLAB-Harmony/usb_apps_dual_role/graphs/commit-activity)
 [![Contributors](https://img.shields.io/github/contributors-anon/Microchip-MPLAB-Harmony/usb_apps_dual_role.svg)](https://github.com/Microchip-MPLAB-Harmony/usb_apps_dual_role/graphs/contributors)
 
